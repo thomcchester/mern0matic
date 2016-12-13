@@ -2,7 +2,7 @@
 #!/bin/bash
 cat >./$@/package.json <<EOL
 {
-  "name": "give it a title",
+  "name": "giveitatitle",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,9 @@ cat >./$@/package.json <<EOL
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "babel-node app.js",
-    "client": "babel-node start-client.js"
+    "client": "babel-node startclient.js",
+    "post-install": "cd client && npm install && cd ..",
+    "makeit": "npm install && npm run post-install"
   },
   "repository": {
     "type": "git",

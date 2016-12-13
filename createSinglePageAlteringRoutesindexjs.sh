@@ -1,3 +1,6 @@
+#!/bin/bash
+
+cat >./$@/routes/index.js <<EOL
 var express = require("express");
 var router = express.Router();
 var passport = require("passport");
@@ -19,3 +22,6 @@ router.get("/*", function(req,res,next){
 
 module.exports = router;
 
+EOL
+
+cat ./$@/routes/index.js
