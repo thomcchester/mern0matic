@@ -14,4 +14,6 @@ if [[ " ${arr[@]} " =~ " -c " ]]; then
 #check for an "-a" alone
 elif [[ " ${arr[@]} " =~ " -a " ]]; then
   echo "there is an a"
+else
+  echo "arguments are not correct"
 fi
